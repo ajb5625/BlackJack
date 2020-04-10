@@ -48,7 +48,7 @@ def game():
         if money <= 0:
             while True:
                 print("Looks like you're in the hole.\n\n1.Call loanshark\n2.Exit game")
-                ui = raw_input()
+                ui = input()
                 if ui == '1':
                     money += 100
                     break
@@ -99,7 +99,7 @@ def game():
         while True:
             bust = False
             print("\nOptions\n1.Hit\n2.Stand\n3.View Cards\n4.Increase Bet\n5.Exit")
-            choice = raw_input()
+            choice = input()
 
             if choice == "1":
                 card = cards.pop()
@@ -201,7 +201,7 @@ def game():
             elif choice == "4":
                 newbet = 0
                 while True:
-                    newbet = raw_input("Please enter your new bet\n")
+                    newbet = input("Please enter your new bet\n")
                     if float(newbet) > money:
                         print("You don't have that much money!\n")
                     else:
@@ -212,7 +212,7 @@ def game():
             else:
                 print("Try again")
 
-        user = raw_input("\nContinue? Y/N\n")
+        user = input("\nContinue? Y/N\n")
         while True:
             if user == "N":
                 exit()
@@ -238,7 +238,7 @@ def game():
 def roboGame(Robot):
     while True:
         print("You will watch the robot play. Press 1 to continue each time.\n")
-        ui = raw_input()
+        ui = input()
         if ui == "1":
             break
         else:
@@ -278,7 +278,7 @@ def roboGame(Robot):
         if money <= 0:
             while True:
                 print("Looks like you're in the hole.\n\n1.Call loanshark\n2.Exit game")
-                ui = raw_input()
+                ui = input()
                 if ui == '1':
                     money += 100
                     break
@@ -329,7 +329,7 @@ def roboGame(Robot):
         while True:
             bust = False
             print("\nOptions\n1.Hit\n2.Stand\n3.View Cards\n4.Increase Bet\n5.Exit")
-            choice = raw_input()
+            choice = input()
 
             if choice == "1":
                 card = cards.pop()
@@ -431,7 +431,7 @@ def roboGame(Robot):
             elif choice == "4":
                 newbet = 0
                 while True:
-                    newbet = raw_input("Please enter your new bet\n")
+                    newbet = input("Please enter your new bet\n")
                     if float(newbet) > money:
                         print("You don't have that much money!\n")
                     else:
@@ -441,7 +441,7 @@ def roboGame(Robot):
                 exit()
             else:
                 print("Try again")
-        User = raw_input("Continue?")
+        User = input("Continue?")
         if User != "1":
             break
         else:
@@ -459,7 +459,7 @@ def roboGame(Robot):
 
 
 while True:
-    user = raw_input("Please select a choice: \n1.Play Game\n2.Watch AI\n")
+    user = input("Please select a choice: \n1.Play Game\n2.Watch AI\n")
     if user == "1":
         game()
     elif user == "2":
